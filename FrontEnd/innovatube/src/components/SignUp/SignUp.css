@@ -9,6 +9,13 @@
     flex-direction: column;
 }
 
+.signUpForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .signUpBox {
     position: relative; 
     z-index: 2; 
@@ -38,6 +45,7 @@
     background: #4B1B19;
     color: aliceblue;
 }
+
 
 .logo{
     width: 20vw;
