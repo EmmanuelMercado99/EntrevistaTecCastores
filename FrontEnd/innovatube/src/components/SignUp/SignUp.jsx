@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import "./SignUp.css"
 import ReCAPTCHA from 'react-google-recaptcha';
 import CryptoJS from 'crypto-js';
@@ -9,7 +9,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 
+
 const SignUp = () => {
+    const navigate = useNavigate()
     const dispatch = useDispatch();
     const users = useSelector((state) => state.userData.users)
     const [formData, setFormData] = useState({
@@ -17,6 +19,7 @@ const SignUp = () => {
         lastname: "",
         user: "",
         password: "",
+        email:""
     })
 
     const [passwordOk, setPasswordOk] = useState({
@@ -36,31 +39,41 @@ const SignUp = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (formData.password === passwordOk.password2) {
-            console.log('Si es la misma');
-            const userExists = users.some(existingUser => existingUser.user === formData.user);
-
-            if (userExists) {
-                alert("Ya existe este usuario, favor de ingresar otro")
+        const {email,user,password,name,lastname} = formData
+        const {password2} = passwordOk
+        if(email!=""&& user!=""&&password!="",name!=""&&lastname!=""&&password2!=""){
+            if (formData.password === passwordOk.password2) {
+                const userExists = users.some(existingUser => existingUser.user === formData.user);
+    
+                if (userExists) {
+                    alert("Ya existe este usuario, favor de ingresar otro")
+                }
+                else {
+                    const hashedPassword = CryptoJS.MD5(formData.password).toString()
+                    alert("Usuario agregado correctamente")
+                    dispatch(addUser({ ...formData, password: hashedPassword }))
+                    navigate('/')
+                    setFormData({
+                        name: "",
+                        lastname: "",
+                        user: "",
+                        password: "",
+                        email:""
+                    })
+                    setPasswordOk({
+                        password2:""
+                    })
+                    
+                }
             }
             else {
-                const hashedPassword = CryptoJS.MD5(formData.password).toString()
-                alert("Usuario agregado correctamente")
-                dispatch(addUser({ ...formData, password: hashedPassword }))
-                setFormData({
-                    name: "",
-                    lastname: "",
-                    user: "",
-                    password: "",
-                })
-                setPasswordOk({
-                    password2:""
-                })
+    
             }
         }
-        else {
-
+        else{
+            alert('No se pueden dejar campos vaciós')
         }
+       
     }
 
 
@@ -77,6 +90,7 @@ const SignUp = () => {
                     <input type="input" class="form-control inputText" value={formData.name} onChange={handleInputChange} id="name" name="name" placeholder="Nombre"></input>
                     <input type="input" class="form-control inputText" value={formData.lastname} onChange={handleInputChange} id="lastname" name="lastname" placeholder="Apellidos"></input>
                     <input type="input" class="form-control inputText" value={formData.user} onChange={handleInputChange} id="user" name="user" placeholder="Usuario"></input>
+                    <input type="input" class="form-control inputText" value={formData.email} onChange={handleInputChange} id="email" name="email" placeholder="Correo electrónico"></input>
                     <input type="password" class="form-control inputText" value={formData.password} onChange={handleInputChange} id="password" name="password" placeholder="Ingrese su contraseña"></input>
                     <input type="password" class="form-control inputText" value={passwordOk.password2} onChange={handleInputChangePassword} id="password2" name="password2" placeholder="Reingrese su contraseña"></input>
                     <ReCAPTCHA

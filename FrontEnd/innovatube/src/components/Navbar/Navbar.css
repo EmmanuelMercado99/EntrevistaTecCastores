@@ -1,11 +1,20 @@
 
 .navbarHome{
     background: white !important;
+    background-color: white !important;
     border-bottom: 1px solid black;
     padding: 0 !important;
+
 }
 
+
 .btnLogOut{
+    background: white;
+    color: white;
+    border: 0;
+}
+
+.btnLogOutIcon{
     background: red;
     color: white;
 }
