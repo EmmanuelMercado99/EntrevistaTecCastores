@@ -1,0 +1,16 @@
+
+.navbarHome{
+    background: white !important;
+    border-bottom: 1px solid black;
+    padding: 0 !important;
+}
+
+.btnLogOut{
+    background: red;
+    color: white;
+}
+
+.navbarContainer{
+    max-width: 80%;
+    flex-wrap: nowrap !important;
+}
