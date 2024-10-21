@@ -2,7 +2,7 @@ import "./Navbar.css"
 
 const Navbar = () => {
     return (
-        <nav class="navbar bg-body-tertiary navbarHome">
+        <nav class="navbar bg-body-tertiary navbarHome fixed-top">
             <div class="container navbarContainer">
                 <a class="navbar-brand" style={{ padding: 0 }} href="#">
                     <img src="castor3.png" alt="Home" width="80" height="80" />
