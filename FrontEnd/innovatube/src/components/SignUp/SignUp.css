@@ -10,8 +10,8 @@
 }
 
 .signUpBox {
-    position: relative; /* Asegúrate de que el cuadro de login esté en el flujo normal */
-    z-index: 2; /* Coloca el loginBox por encima de los fondos */
+    position: relative; 
+    z-index: 2; 
     background: white;
     width: 25vw;
     height: 80vh;
