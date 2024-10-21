@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { login,logout } from './redux/slices/globalStates';
 
 function App() {
+  const valueLogin = useSelector((state) => state.loginSession.login)
   return (
     <div>
       <h1>
-        Se crea proyecto de React
+        {valueLogin? ("Inicia sesion"):("Favor de iniciar sesión")}
       </h1>
     </div>
   );
