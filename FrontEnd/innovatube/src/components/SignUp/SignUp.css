@@ -1,0 +1,47 @@
+.signUpBody{
+    width: 100vw;  
+    height: 100vh; 
+    margin: 0;     
+    padding: 0;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.signUpBox {
+    position: relative; /* Asegúrate de que el cuadro de login esté en el flujo normal */
+    z-index: 2; /* Coloca el loginBox por encima de los fondos */
+    background: white;
+    width: 25vw;
+    height: 80vh;
+    border: 1px solid black;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+}
+
+.signUpText {
+    width: 20vw;
+    height: 5vh;
+    margin: 10px;
+}
+
+.signUpBtnSubmit {
+    width: 10vw;
+    height: 5vh;
+    margin: 10px;
+    background: #4B1B19;
+    color: aliceblue;
+}
+
+.logo{
+    width: 20vw;
+    height: 20vh;
+    border-radius: 10px;
+}
+
