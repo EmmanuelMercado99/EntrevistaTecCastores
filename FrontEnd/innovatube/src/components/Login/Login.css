@@ -26,17 +26,17 @@
 }
 
 .inputText {
-    width: 20vw;
-    height: 5vh;
-    margin: 10px;
+    width: 20vw !important;
+    height: 5vh !important;
+    margin: 10px !important;
 }
 
 .btnSubmit {
-    width: 10vw;
-    height: 5vh;
-    margin: 10px;
-    background: #4B1B19;
-    color: aliceblue;
+    width: 10vw !important;
+    height: 5vh !important;
+    margin: 10px !important;
+    background: #4B1B19 !important;
+    color: aliceblue !important;
 }
 
 .logo{
