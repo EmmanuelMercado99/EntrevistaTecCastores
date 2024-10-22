@@ -1,9 +1,11 @@
+const cors = require('cors')
 const express = require("express")
 
 const app = express()
 const APIroutes = require("./routes/APIroutes.js")
 
 
+app.use(cors())
 
 app.use("/youtube",APIroutes)
 app.use(express.json());
