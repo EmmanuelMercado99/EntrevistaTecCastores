@@ -23,3 +23,18 @@
     max-width: 100% !important;
     flex-wrap: nowrap !important;
 }
+
+.btnFavs{
+    background: black !important;
+    display: flex !important;
+    flex-direction: row;
+    width: 126px;
+    height: 44px;
+    align-items: center;
+}
+
+
+.boxLogoFavs {
+    display: flex;
+    align-items: center;
+}

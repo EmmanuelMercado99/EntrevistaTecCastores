@@ -11,7 +11,7 @@ const FavoritePage = () => {
 
     return (
         <div>
-            {!valueLogin ? (<div>
+            {valueLogin ? (<div>
                 <div>
                     <Navbar></Navbar>
                 </div>

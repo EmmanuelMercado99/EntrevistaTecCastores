@@ -16,17 +16,19 @@ const Navbar = () => {
         <nav class="navbar bg-body-tertiary navbarHome fixed-top">
             <div class="container navbarContainer">
 
-                <div>
-                    
-                </div>
+                <div className="boxLogoFavs">
                 <a class="navbar-brand" style={{ padding: 0 }}>
                     <Link to="/home"><img src="castor3.png" alt="Home" width="80" height="80" /></Link>
                 </a>
-                <Link to="/favorites" className="btn btn-primary">
+                <Link to="/favorites" className="btn btn-primary btnFavs">
                     Favoritos
-                    <i className="bi bi-box-arrow-right" style={{ fontSize: "2rem", color: "red" }}></i>
+                    <i className="bi bi-heart-fill" style={{ fontSize: "2rem", color: "red" }}></i>
                 </Link>
+                </div>
+                <div style={{Width:"560px"}}>
                 <SearchBar></SearchBar>
+                </div>
+                
                 <button className="btnLogOut">
                     <i class="bi bi-box-arrow-right" style={{ fontSize: "2rem", color: "red" }} onClick={logOut} ></i>
                 </button>

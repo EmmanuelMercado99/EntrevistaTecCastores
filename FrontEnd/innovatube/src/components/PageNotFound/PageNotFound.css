@@ -1,0 +1,19 @@
+
+.bodyNotFound{
+    width: 100vw;  
+    height: 100vh; 
+    margin: 0;     
+    padding: 0;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.BtnBackLogin {
+    width: 20vw;
+    height: 5vh;
+    margin: 10px;
+    background: #4B1B19 !important;
+    color: aliceblue !important;
+}
