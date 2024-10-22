@@ -36,7 +36,7 @@ const CardVideo = ({ video }) => {
             <div className="card cardVideoStyle" style={{ width: "20rem", height: "24rem", margin: "10px" }}>
                 <img src={imgCard} className="card-img-top" alt={descriptionCard} />
                 <div className="card-body">
-                    <p className='card-text'>{channel}</p>
+                    <h4 className='card-text'>{channel}</h4>
                     <p className="card-text">{titleCard}</p>
                 </div>
                 <button className="btn btn-light position-absolute" style={{ top: "10px", right: "10px" }} onClick={handleFavoriteClick}>

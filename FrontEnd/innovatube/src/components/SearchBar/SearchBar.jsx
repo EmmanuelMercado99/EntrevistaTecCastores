@@ -17,10 +17,16 @@ const SearchBar = () => {
     const searchDataApi = async (e)=>{
         e.preventDefault()
         navigate('/home')
-        const response = await fetch(`https://apiinnovatube.onrender.com/youtube/getVideo?q=${data}`)
-        const dataJson = await response.json()
-        console.log(dataJson);
-        dispatch(setVideos(dataJson))
+        try{
+            const response = await fetch(`https://apiinnovatube.onrender.com/youtube/getVideo?q=${data}`)
+            const dataJson = await response.json()
+            console.log(dataJson);
+            dispatch(setVideos(dataJson))
+        }
+        catch{
+            alert("Hubo un problema con la petición a la API, render no responde :(")
+        }
+        
         
     }
 

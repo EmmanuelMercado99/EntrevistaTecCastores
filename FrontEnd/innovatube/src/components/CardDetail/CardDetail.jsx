@@ -20,7 +20,7 @@ const ModalVideo = ({ show, handleClose, video }) => {
             </a>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
+                <Button variant="secondary" className='btn btn-danger' onClick={handleClose}>
                     Cerrar
                 </Button>
             </Modal.Footer>

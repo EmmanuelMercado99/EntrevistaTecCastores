@@ -18,7 +18,9 @@ const Navbar = () => {
 
                 <div className="boxLogoFavs">
                 <a class="navbar-brand" style={{ padding: 0 }}>
-                    <Link to="/home"><img src="castor3.png" alt="Home" width="80" height="80" /></Link>
+                    <Link to="/home">
+                    <img src="castor3.png" alt="Home" width="80" height="80" />
+                    </Link>
                 </a>
                 <Link to="/favorites" className="btn btn-primary btnFavs">
                     Favoritos

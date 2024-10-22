@@ -67,7 +67,7 @@ const SignUp = () => {
                 }
             }
             else {
-    
+                alert("Las contraseñas no coinciden")
             }
         }
         else{
@@ -84,8 +84,9 @@ const SignUp = () => {
             <div class="bg bg3"></div>
 
             <div className='signUpBox'>
-                <img className="logoSignUp" src="castor3.png" alt="logo" />
-
+            <p className='fw-bold fs-1'>Innovatube</p>
+                <img className="logoSignUp"  src="castor3.png" alt="logo" />
+               
                 <form onSubmit={handleSubmit} className='signUpForm'>
                     <input type="input" class="form-control inputText" value={formData.name} onChange={handleInputChange} id="name" name="name" placeholder="Nombre"></input>
                     <input type="input" class="form-control inputText" value={formData.lastname} onChange={handleInputChange} id="lastname" name="lastname" placeholder="Apellidos"></input>

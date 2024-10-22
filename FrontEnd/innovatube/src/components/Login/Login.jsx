@@ -44,6 +44,7 @@ const Login = () => {
             <div class="bg bg2"></div>
             <div class="bg bg3"></div>
             <div className='loginBox'>
+            <p className='fw-bold fs-1'>Innovatube</p>
                 <img className="logo" src="castor3.png" alt="logo" />
 
                 <form onSubmit={handleOnSubmit} className='LoginForm'>
