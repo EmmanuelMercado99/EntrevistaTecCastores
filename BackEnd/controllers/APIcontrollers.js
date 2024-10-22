@@ -9,7 +9,7 @@ const URL_Search = "https://www.googleapis.com/youtube/v3/search"
 
 exports.getVideo = async(req,res) =>{
     console.log("Obteniendo listado de vídeos");
-    const searchTerm = req.query.searchTerm
+    const searchTerm = req.query.q
     const params = {
         part: 'snippet',
         q: searchTerm,
