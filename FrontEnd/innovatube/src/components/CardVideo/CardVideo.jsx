@@ -4,11 +4,12 @@ import CardDetail from '../CardDetail/CardDetail'; // Asegúrate de que la ruta 
 import "./CardVideo.css";
 
 const CardVideo = ({ video }) => {
+    console.log(video);
     const { snippet } = video;
-    const titleCard = snippet.title;
-    const descriptionCard = snippet.description;
-    const imgCard = snippet.thumbnails.medium.url;
-    const channel = snippet.channelTitle;
+    const titleCard = snippet.title || "Titulo no disponible";
+    const descriptionCard = snippet.description|| "Descripción no disponible";
+    const imgCard = snippet.thumbnails.medium.url || "URL no disponible";
+    const channel = snippet.channelTitle || "Canal no disponible";
 
     // Estado para manejar la visibilidad del modal
     const [showModal, setShowModal] = useState(false);
