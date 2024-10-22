@@ -13,7 +13,7 @@ exports.getVideo = async(req,res) =>{
     const params = {
         part: 'snippet',
         q: searchTerm,
-        maxResults: 10,
+        maxResults: 16,
         type: 'video',
         key: API_KEY
     }
