@@ -20,6 +20,6 @@
 }
 
 .navbarContainer{
-    max-width: 80%;
+    max-width: 100% !important;
     flex-wrap: nowrap !important;
 }
