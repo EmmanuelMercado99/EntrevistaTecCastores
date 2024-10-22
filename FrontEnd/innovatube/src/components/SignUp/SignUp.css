@@ -20,7 +20,7 @@
     position: relative; 
     z-index: 2; 
     background: white;
-    width: 25vw;
+    width: 50vw;
     height: 98vh;
     border: 1px solid black;
     border-radius: 10%;
@@ -53,3 +53,19 @@
     border-radius: 10px;
 }
 
+.formInstruccions{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 50vw;
+}
+
+.intruccciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10%;
+    
+}
